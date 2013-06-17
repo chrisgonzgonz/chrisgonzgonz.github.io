@@ -52,5 +52,5 @@ Ruby is a beautiful and universal language. Reading this presentation with my in
 
 
 
-Helpful diagram to illustrate the effects of excessive DRY & Automation:
+Helpful diagram from the slides to illustrate the effects of excessive DRY & Automation:
 {% img center /images/grated_slide_for_kids.jpg %}
