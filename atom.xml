@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://chrisgonzgonz.github.io/atom.xml" rel="self"/>
   <link href="http://chrisgonzgonz.github.io/"/>
-  <updated>2013-06-17T07:22:20-04:00</updated>
+  <updated>2013-06-17T07:25:35-04:00</updated>
   <id>http://chrisgonzgonz.github.io/</id>
   <author>
     <name><![CDATA[Chris Gonzales]]></name>
@@ -64,7 +64,7 @@
 
 <p>Ruby is a beautiful and universal language. Reading this presentation with my intermediate Portuguese skillz was a pleasure. Major props to Daniel, for making it interesting and for writing some of the difficult concepts in English.</p>
 
-<p>Helpful diagram to illustrate the effects of excessive DRY &amp; Automation:
+<p>Helpful diagram from the slides to illustrate the effects of excessive DRY &amp; Automation:
 <img class="center" src="http://chrisgonzgonz.github.io/images/grated_slide_for_kids.jpg"></p>
 ]]></content>
   </entry>
