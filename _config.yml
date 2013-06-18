@@ -7,7 +7,7 @@ title: My Octopress Blog
 subtitle: A blogging framework for hackers.
 author: Chris Gonzales
 simple_search: http://google.com/search
-description: 
+description: Student @ The Flatiron School in NYC learning web development with Ruby on Rails. Previously a spreadsheet champion and lifesaving civil servant.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -66,7 +66,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 github_user: chrisgonzgonz
 github_repo_count: 0
 github_show_profile_link: true
-github_skip_forks: true
+github_skip_forks: false
 
 # Twitter
 twitter_user: Chris_GonzGonz

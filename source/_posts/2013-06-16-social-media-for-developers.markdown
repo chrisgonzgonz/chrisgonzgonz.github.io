@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Social Media for Developers: A Beginner's Guide"
+title: "#SocialMedia for Developers: A Beginner's Guide"
 date: 2013-06-16 20:57
 comments: true
 categories: 
