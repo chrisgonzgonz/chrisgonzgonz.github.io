@@ -43,9 +43,11 @@ I like this setup; the content is arranged from left to right scaling from publi
 {% img center http://snag.gy/qcVDf.jpg %}
 
 ###Forget @shtavisays, Look at How Avi Tweets
-For starters, Avi has employed a succinct bounty of information in his bio without cracking 200 characters. Current pursuits, past endeavors, personal links, you name it. I'll be updating my current Jay-Z-quote-starter-bio as soon as I'm done with this post ("Drink Cris Out the Bottle, Eat Popeyes for Dinner").
+For starters, Avi has employed a succinct bounty of information in his bio without cracking 160 characters. Current pursuits, past endeavors, personal links, you name it. I'll be updating my current Jay-Z-quote-starter-bio as soon as I'm done with this post ("Drink Cris Out the Bottle, Eat Popeyes for Dinner").
 
-Now that I've pointed out the obvious, here's the rest. Avi, like Jeff Casimir, Gwen Bell, and Sandi Metz, uses Twitter as an all-purpose outlet. It's a mix of the personal and professional, a swiss-army knife to get the thought across whatever that may be. I've seen Twitter get speakers to come to The Flatiron School, and help students interact with big names within the tech community. I'm excited to leave my caveman days behind me.
+Now that I've pointed out the obvious, here's the rest. Avi, like Jeff Casimir, Gwen Bell, and Sandi Metz, uses Twitter as an all-purpose outlet. It's a mix of the personal and professional, a swiss-army knife to get the thought across whatever that may be. I've seen Twitter get speakers to come to The Flatiron School and help students interact with big names within the tech community. So help me get started- Who should I follow? What should I look out for? 
+
+I'm excited to leave my caveman days behind me.
 
 {% img center http://www.mrgeek.me/wp-content/uploads/2013/04/caveman_computer.jpg %}
 
