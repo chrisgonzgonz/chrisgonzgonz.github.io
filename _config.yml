@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://chrisgonzgonz.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
+title: Chris Gonz's Octopress Blog
+subtitle: Student @ The Flatiron School in NYC
 author: Chris Gonzales
 simple_search: http://google.com/search
-description: Student @ The Flatiron School in NYC learning web development with Ruby on Rails. Previously a spreadsheet champion and lifesaving civil servant.
+description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
