@@ -18,7 +18,7 @@ So I'm learning now.
 
 Better late than never, everyone seems to say. 
 
-We've had some great speakers in class at The Flatiron School, and I've noticed that the developer world communicates via social media. I'm suspect all of the instructors at The Flatiron School knew each other's "handles" before meeting in real life. Even I, a social media neanderthal, followed Sandi Metz before I knew how awesome she was (or why I should think she's awesome). 
+We've had some great speakers in class at The Flatiron School, and I've noticed that the developer world communicates via social media. I suspect all of the instructors at The Flatiron School knew each other's "handles" before meeting in real life. Even I, a social media neanderthal, followed Sandi Metz before I knew how awesome she was. 
 
 Indeed, everything seems to revolve around blogs, micro-blogs, and micro-micro blogs (if that exists). It's daunting; I mean, what's a caveman to do?
 
@@ -38,12 +38,12 @@ Timeline - Activity - Interactions - Tweets - Search: "@FlatironSchool" - Search
 
 {% img center http://snag.gy/V8bbx.jpg %}
 
-I like this setup; the content is arranged from left to right scaling from public to personal interests. I find search columns to be particularly useful as they allow me to receive feeds based on hash tags or mentions. In the screenshot below, I have two search columns set up to find mentions of @FlatironSchool and @shtavisays.
+I like this setup; the content is arranged from left to right, scaling from public to personal interests. I find search columns to be particularly useful as they allow me to receive feeds based on hash tags or mentions. In the screenshot below, I have two search columns set up to find mentions of @FlatironSchool and @shtavisays.
 
 {% img center http://snag.gy/qcVDf.jpg %}
 
 ###Forget @shtavisays, Look at How Avi Tweets
-For starters, Avi has employed a succinct bounty of information in his bio without cracking 160 characters. Current pursuits, past endeavors, personal links, you name it. I'll be updating my current Jay-Z-quote-starter-bio as soon as I'm done with this post ("Drink Cris Out the Bottle, Eat Popeyes for Dinner").
+For starters, our Flatiron School Dean has employed a succinct bounty of information in his bio without cracking 160 characters. Current pursuits, past endeavors, personal links, you name it. I'll be updating my current Jay-Z-quote-starter-bio as soon as I'm done with this post ("Drink Cris Out the Bottle, Eat Popeyes for Dinner").
 
 Now that I've pointed out the obvious, here's the rest. Avi, like Jeff Casimir, Gwen Bell, and Sandi Metz, uses Twitter as an all-purpose outlet. It's a mix of the personal and professional, a swiss-army knife to get the thought across whatever that may be. I've seen Twitter get speakers to come to The Flatiron School and help students interact with big names within the tech community. So help me get started- Who should I follow? What should I look out for? 
 
