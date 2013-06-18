@@ -37,15 +37,17 @@ My column setup is as follows:
 
 Timeline - Activity - Interactions - Tweets - Search: "@FlatironSchool" - Search: "@shtavisays"
 
-{% img center /images/tweetdeck.jpg %}
+{% img center http://snag.gy/V8bbx.jpg %}
 
 I like this setup; the content is arranged from left to right scaling from public to personal interests. I find search columns to be particularly useful as they allow me to receive feeds based on hash tags or mentions. In the screenshot below, I have two search columns set up to find mentions of @FlatironSchool and @shtavisays.
+
+{% img center http://snag.gy/qcVDf.jpg %}
 
 ###Forget @shtavisays, Look at How Avi Tweets
 For starters, Avi has employed a succinct bounty of information in his bio without cracking 200 characters. Current pursuits, past endeavors, personal links, you name it. I'll be updating my current Jay-Z-quote-starter-bio as soon as I'm done with this post ("Drink Cris Out the Bottle, Eat Popeyes for Dinner").
 
 Now that I've pointed out the obvious, here's the rest. Avi, like Jeff Casimir, Gwen Bell, and Sandi Metz, uses Twitter as an all-purpose outlet. It's a mix of the personal and professional, a swiss-army knife to get the thought across whatever that may be. I've seen Twitter get speakers to come to The Flatiron School, and help students interact with big names within the tech community. I'm excited to leave my caveman days behind me.
 
-
+{% img center http://www.mrgeek.me/wp-content/uploads/2013/04/caveman_computer.jpg %}
 
 
