@@ -11,7 +11,7 @@ We have smart phones and smart cars, why not Smart-Kegs (patent pending)? [Jord√
 
 {% img center http://i411.photobucket.com/albums/pp199/hccllc2008/1105081524.jpg %}
 
-You can find our team's initial plan in Joe's previous [post](http://weatherlightus.tumblr.com/post/53232311824/and-the-beer-must-flow). Since then, we've amassed the hardware (raspberry pi, arduino, flow meter), we've programmed the pi/arduino, and we've begun our initial tests.
+You can find our team's initial plan in Joe's [post](http://weatherlightus.tumblr.com/post/53232311824/and-the-beer-must-flow). Since then, we've amassed the hardware (raspberry pi, arduino, flow meter), we've programmed the pi/arduino, and we've begun our initial tests.
 
 ##Working with hardware is hard...
 
@@ -31,9 +31,9 @@ Our team has spent some evenings working on transmitting an electrical pulse fro
 ##Working with hardware is rewarding...
 Issues so far:
 <li>there seemed to be a lack of documentation for related flow meter projects in general, and related projects written in Ruby specifically (we aim to fix this)</li>
-<li>had to figure out how to correctly connect flow meter -> arduino -> raspberry pi</li>
-<li>had to capture flow meter readings</li>
-<li>had to ship flow meter data to raspberry pi for analysis</li>
+<li>correctly connecting flow meter -> arduino -> raspberry pi</li>
+<li>capturing flow meter readings</li>
+<li>shipping flow meter data to raspberry pi for analysis</li>
 
 The first 3 items on this list were taken care of by sorting out the wiring via guess and check and isolated pulse readings on the arduino. After that, raspberry pi can consume the arduino's output via loops on each machine (arduino printing, pi listening). These loops are not synchronized, so although we are able to pass packets of data along this chain, some packets get cut off.
 
