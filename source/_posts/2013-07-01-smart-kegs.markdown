@@ -17,5 +17,5 @@ You can find our initial plan in Joe's previous [post](http://weatherlightus.tum
 
 The last week has taught me to appreciate the beautiful error messages that Ruby, Sinatra, and almost anything software related have offered up to us. 
 
-{% img center /Users/chrisgonzales/Development/chrisgonzgonz.github.io/source/images/rubyerror %}
+{% img center /Users/chrisgonzales/Development/chrisgonzgonz.github.io/source/images/rubyerror.png %}
 
