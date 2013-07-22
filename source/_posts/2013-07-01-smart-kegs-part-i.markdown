@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Smart-Kegs"
+title: "Smart-Kegs Part I"
 date: 2013-07-01 23:07
 comments: true
 categories: 
 ---
 Kegs Should Refill Themselves
 ------------------------------
-We have smart phones and smart cars, why not Smart-Kegs (patent pending)? [Jordán](http://jgtr.github.io/), [Joe](http://weatherlightus.tumblr.com/) and I would like to present to you... Keg Kong! The solution to a tapped keg on a Friday afternoon at The Flatiron School. Keg Kong will re-order himself before the class gets to the bottom of the barrel, and we'll be able to track usage statistics along the way.
+We have smart phones and smart cars, why not Smart-Kegs (patent pending)? [Jordán](http://jgtr.github.io/), [Joe](http://weatherlightus.tumblr.com/) and I would like to present to you... KegKong! The solution to a tapped keg on a Friday afternoon at The Flatiron School. KegKong will re-order himself before the class gets to the bottom of the barrel, and we'll be able to track usage statistics along the way.
 
 {% img center http://i411.photobucket.com/albums/pp199/hccllc2008/1105081524.jpg %}
 
