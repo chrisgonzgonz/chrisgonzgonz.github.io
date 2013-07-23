@@ -2,9 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://chrisgonzgonz.github.io
-title: Chris's Code Corral
-subtitle: Student @ The Flatiron School in NYC
+url: codercorral.com #http://chrisgonzgonz.github.io
+title: CoderCorral
+subtitle: Blog of a Student @ The Flatiron School in NYC
 author: Chris Gonzales
 simple_search: http://google.com/search
 description:
