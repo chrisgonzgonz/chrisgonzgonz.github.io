@@ -3,7 +3,8 @@ layout: post
 title: "Smart-Kegs Part II"
 date: 2013-07-22 00:38
 comments: true
-categories: 
+categories:
+published: false 
 ---
 It's Alive!!!
 -------------
