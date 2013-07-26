@@ -14,7 +14,7 @@ Please note that this assumes that you've [setup an Octopress blog](http://octop
 
 1. Buy your domain name. I picked mine up from [Namecheap](https://www.namecheap.com/) so I'll use screenshots of my setup on their site.
 
-2. Next, set up an A Record of <code> 204.232.175.78 </code> and CNAME of your github pages address, in this case <code>chrisgonzgonz.github.io</code>. This can be done from "All Host Settings" on Namecheap.
+2. Next, set up an A Record of <code> 204.232.175.78 </code> and CNAME of your github pages address, in this case <code>chrisgonzgonz.github.io</code>. This can be done from "All Host Records" on Namecheap.
 
 {% img center /images/namecheap1 %}
 
@@ -22,7 +22,7 @@ Please note that this assumes that you've [setup an Octopress blog](http://octop
 
 {% img center /images/namecheap2 %}
 
-That's it, 3 easy steps. This takes about 10 minutes to update, then when you type in codercorral.com, you'll be directed to github at 204.232.175.78, and my blog will be found via the CNAME file.
+That's it, 3 easy steps. <code>Rake generate</code> and <code>rake deploy</code> as normal and it'll take about 10 minutes to update. When you type in codercorral.com, you'll be directed to github at 204.232.175.78, and my blog will be found via the CNAME file.
 
 {% img center /images/namecheap4 %}
 

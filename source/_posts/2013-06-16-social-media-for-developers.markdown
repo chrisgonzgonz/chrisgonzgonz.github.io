@@ -8,7 +8,7 @@ categories:
 
 I've been living under a rock for the last 2 years.
 ---------------------------------------------------
-I've just finished a tour of duty with a rigid, humorless financial institution that blocked virtually all forms of social media. Actually, they blocked any website I use on a daily basis. The Google suite, Facebook, Twitter... you get the picture. Know your role.
+I've just finished a tour of duty with a rigid financial institution that blocked virtually all forms of social media. Actually, they blocked any website I use on a daily basis. The Google suite, Facebook, Twitter... you get the picture.
 
 And so it went... fake Facebook name so "the man" wouldn't be able to find me. I wasn't even LinkedIn with my friends and colleagues in our little version of North Korea. That is, until I dropped the mic after my farewell speech. 
 
