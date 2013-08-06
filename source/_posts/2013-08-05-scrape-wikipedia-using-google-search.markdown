@@ -17,10 +17,10 @@ The solution is what I'll call a 'double-scrape'. The first thing I did was crea
 
 Next we get the Google search result page for this query string, which Nokogiri scrapes to turn the first result in the list (which should be the Wikipedia article) into the url for the programmer's wikipedia page. Scrape n' repeat.
 
-{% img center images/noko1 %}
+{% img center /images/noko1 %}
 
 Postscript
 ----------
 While I'm still testing this solution out, I have to say it seems pretty robust. The evidence lies in our seed data, where one Programmer of the Day was listed as 'Cookie Monster.'
 
-{% img center images/noko2 %}
+{% img center /images/noko2 %}
