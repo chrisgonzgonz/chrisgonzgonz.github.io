@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Smart-Kegs Part I - CoderCorral</title>
+  <meta name="author" content="Chris Gonzales">
+
+  
+  <meta name="description" content="Kegs Should Refill Themselves We have smart phones and smart cars, why not Smart-Kegs (patent pending)? Jordán, Joe and I would like to present to &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="CoderCorral" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42615530-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">CoderCorral</a></h1>
+  
+    <h2>Ramblings RE: iOS, Rails & Hardware</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chrisgonzgonz.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Smart-Kegs Part I</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-01T23:07:00-04:00" pubdate data-updated="true">Jul 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>Kegs Should Refill Themselves</h2>
+
+<p>We have smart phones and smart cars, why not Smart-Kegs (patent pending)? <a href="http://jgtr.github.io/">Jordán</a>, <a href="http://weatherlightus.tumblr.com/">Joe</a> and I would like to present to you&hellip; KegKong! The solution to a tapped keg on a Friday afternoon at The Flatiron School. KegKong will re-order himself before the class gets to the bottom of the barrel, and we&rsquo;ll be able to track usage statistics along the way.</p>
+
+<p><img class="center" src="http://i411.photobucket.com/albums/pp199/hccllc2008/1105081524.jpg"></p>
+
+<p>You can find our team&rsquo;s initial plan in Joe&rsquo;s <a href="http://weatherlightus.tumblr.com/post/53232311824/and-the-beer-must-flow">post</a>. Since then, we&rsquo;ve amassed the hardware (raspberry pi, arduino, flow meter), we&rsquo;ve programmed the pi/arduino, and we&rsquo;ve begun our initial tests.</p>
+
+<h2>Working with hardware is hard&hellip;</h2>
+
+<p>The last week has taught me to appreciate the beautiful error messages that Ruby, Sinatra, and almost anything software related have to offer. We&rsquo;ve been unable to find much documentation on our second-hand flow meter so we&rsquo;ve been having fun figuring out how to wire everything together.</p>
+
+<p>A Beautiful and Informative Ruby Error Message:
+<img class="center" src="http://snag.gy/5EbK3.jpg"></p>
+
+<p>Jordán Tackling a Flow Meter to Arduino Error Message:
+<img class="center" src="http://snag.gy/Ie968.jpg"></p>
+
+<h2>Working with hardware is rewarding&hellip;</h2>
+
+<p>Our team has spent some evenings working on transmitting an electrical pulse from the flow meter to the arduino to the raspberry pi. We&rsquo;ve hypothesized as to why a process may or may not be working and we&rsquo;ve broken problems down into ever-smaller components. I&rsquo;ll cover the issues we had and our next steps in a second, but let me just say, I have never high-fived so hard over such incremental progress.
+<img class="center" src="http://www.corepower.com/blog/wp-content/uploads/Victory-2.jpg"></p>
+
+<h2>Working with hardware is rewarding&hellip;</h2>
+
+<p>Issues so far:
+<li>there seemed to be a lack of documentation for related flow meter projects in general, and related projects written in Ruby specifically (we aim to fix this)</li>
+<li>correctly connecting flow meter &ndash;> arduino &ndash;> raspberry pi</li>
+<li>capturing flow meter readings</li>
+<li>shipping flow meter data to raspberry pi for analysis</li></p>
+
+<p>The first 3 items on this list were taken care of by sorting out the wiring via guess and check and isolated pulse readings on the arduino. After that, raspberry pi can consume the arduino&rsquo;s output via loops on each machine (arduino printing, pi listening). These loops are not synchronized, so although we are able to pass packets of data along this chain, some packets get cut off.</p>
+
+<pre><code>                            Ruby Loop (Listening):
+</code></pre>
+
+<p><img class="center" src="http://snag.gy/wl86E.jpg"></p>
+
+<pre><code>                          Arduino Loop (Printing):
+</code></pre>
+
+<p><img class="center" src="http://snag.gy/mzcBe.jpg"></p>
+
+<h2>2 possible solutions for this data integrity problem:</h2>
+
+<p><li>install a data-logging shield onto the arduino to store data and send in complete packets to be parsed at a later time</li>
+<li>install a WiFi shield that connects the arduino wirelessly, and we can send TCP packets to the raspberry pi which we can set up to always be listening via sockets.</li></p>
+
+<p>More to come as the saga continues!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chris Gonzales</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-01T23:07:00-04:00" pubdate data-updated="true">Jul 1<span>st</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i/" data-via="Chris_GonzGonz" data-counturl="http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/06/16/speaker-deck-rubyconf-brazil-2012/" title="Previous Post: Speaker Deck: RubyConf Brazil 2012">&laquo; Speaker Deck: RubyConf Brazil 2012</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/" title="Next Post: Setting Up a Custom Domain with Octopress / Github Pages">Setting Up a Custom Domain with Octopress / Github Pages &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/">Xcode's Storyboard Has an XML Skeleton</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/09/smart-kegs-part-ii/">Smart-Kegs Part II</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search/">Scraping Wikipedia Using Nokogiri and Google Search</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/">Setting Up a Custom Domain With Octopress / Github Pages</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chris Gonzales -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

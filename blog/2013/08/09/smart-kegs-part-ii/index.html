@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Smart-Kegs Part II - CoderCorral</title>
+  <meta name="author" content="Chris Gonzales">
+
+  
+  <meta name="description" content="It&rsquo;s Alive!!! (Locally) KegKong lives! In Smart-Kegs Part I we left off with our flowmeter and arduino sending incomplete readings to the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chrisgonzgonz.github.io/blog/2013/08/09/smart-kegs-part-ii">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="CoderCorral" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42615530-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">CoderCorral</a></h1>
+  
+    <h2>Ramblings RE: iOS, Rails & Hardware</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chrisgonzgonz.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Smart-Kegs Part II</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T07:43:00-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>It&rsquo;s Alive!!! (Locally)</h2>
+
+<p>KegKong lives! In <a href="http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a> we left off with our flowmeter and arduino sending incomplete readings to the raspberry pi with no database persistance. I thought we&rsquo;d take care of this data integrity problem with either a data-logging shield or a wifi shield. Instead, the fix that brought us to a minimum viable product was actually a lot simpler- we took advantage of a delimiter with ruby&rsquo;s <strong>gets</strong> method, in this case &ldquo;\r\n&rdquo; which is the same as <strong>null</strong>.</p>
+
+<p><img class="left" src="/images/delimiter1">
+<img class="right" src="/images/kk_folders"></p>
+
+<p>Using this and the arduino&rsquo;s serial caching abilities, we made sure to only transfer only complete data to the raspberry pi and remove null values.</p>
+
+<p>Great! Next we needed an interface to show off our data. Our weapon of choice here is a light-weight Sinatra application with Activerecord. We built two models, keg and measurements. Keg keeps track of vital keg data like type of beer, maximum volume, and whether or not a refill request has been sent. Measurements allows us to capture the volume of each pull in pulses, the corresponding change in volume in gallons, and the id of the keg that each measurement belongs to. The measurement/keg id relationship is necessary as we will create a new keg in order to &ldquo;reset&rdquo; each time the beer runs out.</p>
+
+<p>A keg object can check its own volume by subtracting the sum of its measurements from its max volume, and it can send an email requesting reinforcements using the Gmail Sender gem.</p>
+
+<p><img class="center" src="/images/kegkong2_1"></p>
+
+<p>Here I&rsquo;ll leave you with KegKong fully functioning locally. In <strong>Smart-Kegs Part III</strong>, I&rsquo;ll go over all the fun we had with deployment to Heroku, changing our scripted method of persistance and migrating our SQLite database to PostgreSQL.</p>
+
+<p><img class="center" src="/images/kegkong2_2">
+<img class="center" src="/images/kegkong2_reset"></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Chris Gonzales</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T07:43:00-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisgonzgonz.github.io/blog/2013/08/09/smart-kegs-part-ii/" data-via="Chris_GonzGonz" data-counturl="http://chrisgonzgonz.github.io/blog/2013/08/09/smart-kegs-part-ii/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search/" title="Previous Post: Scraping Wikipedia Using Nokogiri and Google Search">&laquo; Scraping Wikipedia Using Nokogiri and Google Search</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/" title="Next Post: Xcode's Storyboard Has an XML Skeleton">Xcode's Storyboard Has an XML Skeleton &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/">Xcode's Storyboard Has an XML Skeleton</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/09/smart-kegs-part-ii/">Smart-Kegs Part II</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search/">Scraping Wikipedia Using Nokogiri and Google Search</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/">Setting Up a Custom Domain With Octopress / Github Pages</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Chris Gonzales -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

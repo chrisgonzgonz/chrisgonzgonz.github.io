@@ -1,118 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>CoderCorral</title>
-  <meta name="author" content="Chris Gonzales">
-
-  
-  <meta name="description" content="Storyboard&rsquo;s Skeleton: XML If you&rsquo;ve just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://chrisgonzgonz.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="CoderCorral" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-42615530-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">CoderCorral</a></h1>
-  
-    <h2>Ramblings RE: iOS, Rails & Hardware</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:chrisgonzgonz.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[CoderCorral]]></title>
+  <link href="http://chrisgonzgonz.github.io/atom.xml" rel="self"/>
+  <link href="http://chrisgonzgonz.github.io/"/>
+  <updated>2014-10-14T07:26:59-04:00</updated>
+  <id>http://chrisgonzgonz.github.io/</id>
+  <author>
+    <name><![CDATA[Chris Gonzales]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/">Xcode&#8217;s Storyboard Has an XML Skeleton</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2014-10-13T23:02:00-04:00" pubdate data-updated="true">Oct 13<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Storyboard&rsquo;s Skeleton: XML</h2>
+  <entry>
+    <title type="html"><![CDATA[Xcode's Storyboard Has an XML Skeleton]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/"/>
+    <updated>2014-10-13T23:02:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton</id>
+    <content type="html"><![CDATA[<h2>Storyboard&rsquo;s Skeleton: XML</h2>
 
 <p>If you&rsquo;ve just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you might not have run into this yet. The Storyboard file in Interface Builder is a magical place free of HTML and CSS drudgery. It&rsquo;s a place where you can drag-and-drop objects into scenes as quickly as your imagination can conjure them up. But Storyboard isn&rsquo;t all magic; it&rsquo;s magic and XML.</p>
 
 <p>To see how Storyboard objects translate into XML, I&rsquo;ve put together a little Halloween themed jukebox layout:</p>
 
-<p><img src="/images/monster_mash_full.png" alt="&quot;monster_mash_full&quot;" /></p>
+<p><img src="http://chrisgonzgonz.github.io/images/monster_mash_full.png" alt="&quot;monster_mash_full&quot;" /></p>
 
 <h3>Monster Mash Jukebox</h3>
 
@@ -139,7 +51,7 @@
 
 <p>The little magnifying glass button also has a segue action connecting it to the Song Detail View (that happens to only be host to a spooky PNG).</p>
 
-<p><img src="/images/monster_mash_annotated.png" alt="&quot;monster_mash_annotated&quot;" /></p>
+<p><img src="http://chrisgonzgonz.github.io/images/monster_mash_annotated.png" alt="&quot;monster_mash_annotated&quot;" /></p>
 
 <h3>UINavigationController</h3>
 
@@ -355,47 +267,20 @@
 
 
 <p>Ok, so I know this is a lot of XML. But it&rsquo;s pretty cool, because if you can get past how horrible it is to read, you can see that it&rsquo;s SUPER DESCRIPTIVE. Like so descriptive that every little checkbox and field and setting and doohickey that appears in Xcode&rsquo;s Attributes Inspector, Size Inspector, Connections Inspector, and Identity Inspector for every single view and subview is represented.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/09/smart-kegs-part-ii/">Smart-Kegs Part II</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-09T07:43:00-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>It&rsquo;s Alive!!! (Locally)</h2>
+  <entry>
+    <title type="html"><![CDATA[Smart-Kegs Part II]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2013/08/09/smart-kegs-part-ii/"/>
+    <updated>2013-08-09T07:43:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2013/08/09/smart-kegs-part-ii</id>
+    <content type="html"><![CDATA[<h2>It&rsquo;s Alive!!! (Locally)</h2>
 
 <p>KegKong lives! In <a href="http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a> we left off with our flowmeter and arduino sending incomplete readings to the raspberry pi with no database persistance. I thought we&rsquo;d take care of this data integrity problem with either a data-logging shield or a wifi shield. Instead, the fix that brought us to a minimum viable product was actually a lot simpler- we took advantage of a delimiter with ruby&rsquo;s <strong>gets</strong> method, in this case &ldquo;\r\n&rdquo; which is the same as <strong>null</strong>.</p>
 
-<p><img class="left" src="/images/delimiter1">
-<img class="right" src="/images/kk_folders"></p>
+<p><img class="left" src="http://chrisgonzgonz.github.io/images/delimiter1">
+<img class="right" src="http://chrisgonzgonz.github.io/images/kk_folders"></p>
 
 <p>Using this and the arduino&rsquo;s serial caching abilities, we made sure to only transfer only complete data to the raspberry pi and remove null values.</p>
 
@@ -403,48 +288,21 @@
 
 <p>A keg object can check its own volume by subtracting the sum of its measurements from its max volume, and it can send an email requesting reinforcements using the Gmail Sender gem.</p>
 
-<p><img class="center" src="/images/kegkong2_1"></p>
+<p><img class="center" src="http://chrisgonzgonz.github.io/images/kegkong2_1"></p>
 
 <p>Here I&rsquo;ll leave you with KegKong fully functioning locally. In <strong>Smart-Kegs Part III</strong>, I&rsquo;ll go over all the fun we had with deployment to Heroku, changing our scripted method of persistance and migrating our SQLite database to PostgreSQL.</p>
 
-<p><img class="center" src="/images/kegkong2_2">
-<img class="center" src="/images/kegkong2_reset"></p>
-</div>
+<p><img class="center" src="http://chrisgonzgonz.github.io/images/kegkong2_2">
+<img class="center" src="http://chrisgonzgonz.github.io/images/kegkong2_reset"></p>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search/">Scraping Wikipedia Using Nokogiri and Google Search</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-05T19:55:00-04:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>The Problem:</h2>
+  <entry>
+    <title type="html"><![CDATA[Scraping Wikipedia Using Nokogiri and Google Search]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search/"/>
+    <updated>2013-08-05T19:55:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search</id>
+    <content type="html"><![CDATA[<h2>The Problem:</h2>
 
 <p>I needed to write a method for an application that would take a famous programmer&rsquo;s name and scrape the related Wikipedia page for relevant resources, the most important of which would be a picture.</p>
 
@@ -456,49 +314,22 @@
 
 <p>Next we get the Google search result page for this query string, which Nokogiri scrapes to turn the first result in the list (which should be the Wikipedia article) into the url for the programmer&rsquo;s wikipedia page. Scrape n&#8217; repeat.</p>
 
-<p><img class="center" src="/images/noko1"></p>
+<p><img class="center" src="http://chrisgonzgonz.github.io/images/noko1"></p>
 
 <h2>Postscript</h2>
 
 <p>While I&rsquo;m still testing this solution out, I have to say it seems pretty robust. The evidence lies in our seed data, where one Programmer of the Day was listed as &lsquo;Cookie Monster.&rsquo;</p>
 
-<p><img class="center" src="/images/noko2"></p>
-</div>
+<p><img class="center" src="http://chrisgonzgonz.github.io/images/noko2"></p>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/">Setting Up a Custom Domain With Octopress / Github Pages</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-24T09:04:00-04:00" pubdate data-updated="true">Jul 24<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I set up a blog with Octopress. It&rsquo;s great, but I&rsquo;d always get really skeptical looks when I&rsquo;d tell friends and family to read my stuff at <a href="http://chrisgonzgonz.github.io">chrisgonzgonz.github.io</a>.</p>
+  <entry>
+    <title type="html"><![CDATA[Setting Up a Custom Domain with Octopress / Github Pages]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/"/>
+    <updated>2013-07-24T09:04:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages</id>
+    <content type="html"><![CDATA[<p>I set up a blog with Octopress. It&rsquo;s great, but I&rsquo;d always get really skeptical looks when I&rsquo;d tell friends and family to read my stuff at <a href="http://chrisgonzgonz.github.io">chrisgonzgonz.github.io</a>.</p>
 
 <p>To remedy this, I bought a domain name. I had some issues getting it to play nice with my github pages site, so here&rsquo;s a quick n&#8217; dirty guide to setting this up:</p>
 
@@ -510,56 +341,29 @@
 </ol>
 
 
-<p><img class="center" src="/images/namecheap1"></p>
+<p><img class="center" src="http://chrisgonzgonz.github.io/images/namecheap1"></p>
 
 <ol>
 <li>Finally, create a file called <code>CNAME</code> <em>in your blog&rsquo;s source folder.</em> This part is important- if you&rsquo;re not using Octopress you can put this in your blog&rsquo;s root. Octopress requires that this file be in source so that when you <code>rake generate</code> it can be pushed to master. In your CNAME file, save the name of your new domain:</li>
 </ol>
 
 
-<p><img class="center" src="/images/namecheap2"></p>
+<p><img class="center" src="http://chrisgonzgonz.github.io/images/namecheap2"></p>
 
 <p>That&rsquo;s it, 3 easy steps. <code>Rake generate</code> and <code>rake deploy</code> as normal and it&rsquo;ll take about 10 minutes to update. When you type in codercorral.com, you&rsquo;ll be directed to github at 204.232.175.78, and my blog will be found via the CNAME file.</p>
 
-<p><img class="center" src="/images/namecheap4"></p>
+<p><img class="center" src="http://chrisgonzgonz.github.io/images/namecheap4"></p>
 
 <p>Also, Google has a cool <a href="http://support.google.com/a/bin/answer.py?hl=en&amp;answer=48090#K">guide to DNS basics</a> for those interested in learning more about A Record and CNAME.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-01T23:07:00-04:00" pubdate data-updated="true">Jul 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Kegs Should Refill Themselves</h2>
+  <entry>
+    <title type="html"><![CDATA[Smart-Kegs Part I]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i/"/>
+    <updated>2013-07-01T23:07:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i</id>
+    <content type="html"><![CDATA[<h2>Kegs Should Refill Themselves</h2>
 
 <p>We have smart phones and smart cars, why not Smart-Kegs (patent pending)? <a href="http://jgtr.github.io/">Jordán</a>, <a href="http://weatherlightus.tumblr.com/">Joe</a> and I would like to present to you&hellip; KegKong! The solution to a tapped keg on a Friday afternoon at The Flatiron School. KegKong will re-order himself before the class gets to the bottom of the barrel, and we&rsquo;ll be able to track usage statistics along the way.</p>
 
@@ -608,42 +412,15 @@
 <li>install a WiFi shield that connects the arduino wirelessly, and we can send TCP packets to the raspberry pi which we can set up to always be listening via sockets.</li></p>
 
 <p>More to come as the saga continues!</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/16/speaker-deck-rubyconf-brazil-2012/">Speaker Deck: RubyConf Brazil 2012</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-16T22:28:00-04:00" pubdate data-updated="true">Jun 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>A retrospective of problematic projects (Rubyconf Brazil 2012)</h2>
+  <entry>
+    <title type="html"><![CDATA[Speaker Deck: RubyConf Brazil 2012]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2013/06/16/speaker-deck-rubyconf-brazil-2012/"/>
+    <updated>2013-06-16T22:28:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2013/06/16/speaker-deck-rubyconf-brazil-2012</id>
+    <content type="html"><![CDATA[<h2>A retrospective of problematic projects (Rubyconf Brazil 2012)</h2>
 
 <p>I am currently a student at The Flatiron School, learning how to develop for the internetz in Ruby on Rails. We were given an assignment to check out a Ruby-related slide deck on Speaker Deck and drop some knowledge via blog. Here&rsquo;s mine:</p>
 
@@ -690,43 +467,16 @@
 <p>Ruby is a beautiful and universal language. Reading this presentation with my intermediate Portuguese skillz was a pleasure. Major props to Daniel, for making it interesting and for writing some of the difficult concepts in English.</p>
 
 <p>Helpful diagram from the slides to illustrate the effects of excessive DRY &amp; Automation:
-<img class="center" src="/images/grated_slide_for_kids.jpg"></p>
-</div>
+<img class="center" src="http://chrisgonzgonz.github.io/images/grated_slide_for_kids.jpg"></p>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/16/social-media-for-developers/">#SocialMedia for Developers: A Beginner&#8217;s Guide</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-16T20:57:00-04:00" pubdate data-updated="true">Jun 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>I&rsquo;ve been living under a rock for the last 2 years.</h2>
+  <entry>
+    <title type="html"><![CDATA[#SocialMedia for Developers: A Beginner's Guide]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2013/06/16/social-media-for-developers/"/>
+    <updated>2013-06-16T20:57:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2013/06/16/social-media-for-developers</id>
+    <content type="html"><![CDATA[<h2>I&rsquo;ve been living under a rock for the last 2 years.</h2>
 
 <p>I&rsquo;ve just finished a tour of duty with a rigid financial institution that blocked virtually all forms of social media. Actually, they blocked any website I use on a daily basis. The Google suite, Facebook, Twitter&hellip; you get the picture.</p>
 
@@ -772,84 +522,7 @@ My column setup is as follows:</p>
 <p>I&rsquo;m excited to leave my caveman days behind me.</p>
 
 <p><img class="center" src="http://www.mrgeek.me/wp-content/uploads/2013/04/caveman_computer.jpg"></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/">Xcode&#8217;s Storyboard Has an XML Skeleton</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/08/09/smart-kegs-part-ii/">Smart-Kegs Part II</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search/">Scraping Wikipedia Using Nokogiri and Google Search</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/">Setting Up a Custom Domain With Octopress / Github Pages</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Chris Gonzales -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

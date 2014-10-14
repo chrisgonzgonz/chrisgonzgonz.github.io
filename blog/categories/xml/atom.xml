@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: XML | CoderCorral]]></title>
+  <link href="http://chrisgonzgonz.github.io/blog/categories/xml/atom.xml" rel="self"/>
+  <link href="http://chrisgonzgonz.github.io/"/>
+  <updated>2014-10-14T07:26:59-04:00</updated>
+  <id>http://chrisgonzgonz.github.io/</id>
+  <author>
+    <name><![CDATA[Chris Gonzales]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Xcode's Storyboard Has an XML Skeleton]]></title>
+    <link href="http://chrisgonzgonz.github.io/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/"/>
+    <updated>2014-10-13T23:02:00-04:00</updated>
+    <id>http://chrisgonzgonz.github.io/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton</id>
+    <content type="html"><![CDATA[<h2>Storyboard&rsquo;s Skeleton: XML</h2>
+
+<p>If you&rsquo;ve just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you might not have run into this yet. The Storyboard file in Interface Builder is a magical place free of HTML and CSS drudgery. It&rsquo;s a place where you can drag-and-drop objects into scenes as quickly as your imagination can conjure them up. But Storyboard isn&rsquo;t all magic; it&rsquo;s magic and XML.</p>
+
+<p>To see how Storyboard objects translate into XML, I&rsquo;ve put together a little Halloween themed jukebox layout:</p>
+
+<p><img src="/images/monster_mash_full.png" alt="&quot;monster_mash_full&quot;" /></p>
+
+<h3>Monster Mash Jukebox</h3>
+
+<p>Let&rsquo;s talk about the layout first. Our Storyboard&rsquo;s Initial View Controller is a standard UINavigation Controller. That UINavigation Controller has an FISJukeboxViewController as its Root View Controller.</p>
+
+<p>FISJukeboxViewController has some subviews:</p>
+
+<ul>
+<li>A navigation item title</li>
+<li>2 UIBarButtonItems</li>
+<li>2 UIButtons</li>
+<li>A UITextField</li>
+<li>A UITextView</li>
+<li>And A UIView &ldquo;container&rdquo; with 3 subviews:
+
+<ul>
+<li>A UISlider</li>
+<li>A UIImageView</li>
+<li>A UISwitch</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The little magnifying glass button also has a segue action connecting it to the Song Detail View (that happens to only be host to a spooky PNG).</p>
+
+<p><img src="/images/monster_mash_annotated.png" alt="&quot;monster_mash_annotated&quot;" /></p>
+
+<h3>UINavigationController</h3>
+
+<p>Awesome! Now that we&rsquo;ve seen our Storyboard represented both visually and described textually, let&rsquo;s see how it looks in a little Extensible Markup Language:</p>
+
+<ul>
+<li>So our UINavigationController looks like this:</li>
+</ul>
+
+
+<p>```xml</p>
+
+<pre><code>&lt;!--Navigation Controller--&gt;
+    &lt;scene sceneID="BAt-Fk-3mT"&gt;
+        &lt;objects&gt;
+            &lt;navigationController automaticallyAdjustsScrollViewInsets="NO" id="qTf-YL-Hik" sceneMemberID="viewController"&gt;
+                &lt;toolbarItems/&gt;
+                &lt;navigationBar key="navigationBar" contentMode="scaleToFill" id="ngq-Y5-BSZ"&gt;
+                    &lt;rect key="frame" x="0.0" y="0.0" width="320" height="44"/&gt;
+                    &lt;autoresizingMask key="autoresizingMask"/&gt;
+                &lt;/navigationBar&gt;
+                &lt;nil name="viewControllers"/&gt;
+                &lt;connections&gt;
+                    &lt;segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="mFC-jE-bus"/&gt;
+                &lt;/connections&gt;
+            &lt;/navigationController&gt;
+            &lt;placeholder placeholderIdentifier="IBFirstResponder" id="g6X-lG-9hB" userLabel="First Responder" sceneMemberID="firstResponder"/&gt;
+        &lt;/objects&gt;
+        &lt;point key="canvasLocation" x="287" y="-370"/&gt;
+    &lt;/scene&gt;
+</code></pre>
+
+<p>```</p>
+
+<p>As you can see, it&rsquo;s a plain vanilla UINavigationController. The great customization of the nav bars in the following scenes will be a function of their UINavigationItems.</p>
+
+<h3>FISJukeBoxViewController</h3>
+
+<p>```xml</p>
+
+<!--Monster Mash Jukebox-->
+
+
+<pre><code>    &lt;scene sceneID="ufC-wZ-h7g"&gt;
+        &lt;objects&gt;
+            &lt;viewController id="vXZ-lx-hvc" customClass="FISJukeboxViewController" sceneMemberID="viewController"&gt;
+                &lt;layoutGuides&gt;
+                    &lt;viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/&gt;
+                    &lt;viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/&gt;
+                &lt;/layoutGuides&gt;
+                &lt;view key="view" contentMode="scaleToFill" id="kh9-bI-dsS"&gt;
+                    &lt;rect key="frame" x="0.0" y="0.0" width="320" height="568"/&gt;
+                    &lt;autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/&gt;
+                    &lt;subviews&gt;
+                        &lt;button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf4-v3-4l3"&gt;
+                            &lt;rect key="frame" x="20" y="84" width="57" height="30"/&gt;
+                            &lt;state key="normal" title="Play"&gt;
+                                &lt;color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/&gt;
+                            &lt;/state&gt;
+                            &lt;connections&gt;
+                                &lt;action selector="playButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Oj5-ck-UTU"/&gt;
+                            &lt;/connections&gt;
+                        &lt;/button&gt;
+                        &lt;button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iq-tG-pLm"&gt;
+                            &lt;rect key="frame" x="248" y="84" width="52" height="30"/&gt;
+                            &lt;state key="normal" title="Stop"&gt;
+                                &lt;color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/&gt;
+                            &lt;/state&gt;
+                            &lt;connections&gt;
+                                &lt;action selector="stopButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gKe-8S-iZF"/&gt;
+                            &lt;/connections&gt;
+                        &lt;/button&gt;
+                        &lt;textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song #" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zs-Oa-X6P"&gt;
+                            &lt;rect key="frame" x="85" y="84" width="155" height="30"/&gt;
+                            &lt;fontDescription key="fontDescription" type="system" pointSize="14"/&gt;
+                            &lt;textInputTraits key="textInputTraits" keyboardType="numberPad"/&gt;
+                        &lt;/textField&gt;
+                        &lt;view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88c-gR-8Xt"&gt;
+                            &lt;rect key="frame" x="37" y="387" width="251" height="137"/&gt;
+                            &lt;subviews&gt;
+                                &lt;imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halloween236.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hah-IK-733"&gt;
+                                    &lt;rect key="frame" x="167" y="53" width="64" height="64"/&gt;
+                                &lt;/imageView&gt;
+                                &lt;switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxc-hA-oDz"&gt;
+                                    &lt;rect key="frame" x="20" y="69" width="51" height="31"/&gt;
+                                &lt;/switch&gt;
+                                &lt;slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="s6K-YA-5Nw"&gt;
+                                    &lt;rect key="frame" x="66" y="21" width="118" height="31"/&gt;
+                                &lt;/slider&gt;
+                            &lt;/subviews&gt;
+                            &lt;color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/&gt;
+                        &lt;/view&gt;
+                        &lt;textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-Sv-WQZ"&gt;
+                            &lt;rect key="frame" x="20" y="147" width="280" height="211"/&gt;
+                            &lt;color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/&gt;
+                            &lt;mutableString key="text"&gt;Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.&lt;/mutableString&gt;
+                            &lt;fontDescription key="fontDescription" type="system" pointSize="14"/&gt;
+                            &lt;textInputTraits key="textInputTraits" autocapitalizationType="sentences"/&gt;
+                        &lt;/textView&gt;
+                    &lt;/subviews&gt;
+                    &lt;color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/&gt;
+                &lt;/view&gt;
+                &lt;toolbarItems/&gt;
+                &lt;navigationItem key="navigationItem" title="Monster Mash Jukebox" id="oeF-Q3-RQ7"&gt;
+                    &lt;barButtonItem key="leftBarButtonItem" systemItem="fastForward" id="mEm-xQ-80B"/&gt;
+                    &lt;barButtonItem key="rightBarButtonItem" systemItem="search" id="Wnw-xL-1xa"&gt;
+                        &lt;connections&gt;
+                            &lt;segue destination="sFH-Ra-eR6" kind="push" id="dPq-Kt-AS5"/&gt;
+                        &lt;/connections&gt;
+                    &lt;/barButtonItem&gt;
+                &lt;/navigationItem&gt;
+                &lt;simulatedToolbarMetrics key="simulatedBottomBarMetrics"/&gt;
+                &lt;connections&gt;
+                    &lt;outlet property="playlistView" destination="XV6-Sv-WQZ" id="XGy-na-K6i"/&gt;
+                    &lt;outlet property="songSelectorField" destination="5zs-Oa-X6P" id="Dgx-lp-xjs"/&gt;
+                &lt;/connections&gt;
+            &lt;/viewController&gt;
+            &lt;placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/&gt;
+        &lt;/objects&gt;
+        &lt;point key="canvasLocation" x="669" y="-370"/&gt;
+    &lt;/scene&gt;
+</code></pre>
+
+<p>```</p>
+
+<p>Ok, so I know this is a lot of XML. But it&rsquo;s pretty cool, because if you can get past how horrible it is to read, you can see that it&rsquo;s SUPER DESCRIPTIVE. Like so descriptive that every little checkbox and field and setting and doohickey that appears in Xcode&rsquo;s Attributes Inspector, Size Inspector, Connections Inspector, and Identity Inspector for every single view and subview is represented.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>CoderCorral</title>
+  <title>Xcode's Storyboard Has an XML Skeleton - CoderCorral</title>
   <meta name="author" content="Chris Gonzales">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chrisgonzgonz.github.io">
+  <link rel="canonical" href="http://chrisgonzgonz.github.io/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="CoderCorral" type="application/atom+xml">
@@ -75,15 +75,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/">Xcode&#8217;s Storyboard Has an XML Skeleton</a></h1>
+      <h1 class="entry-title">Xcode's Storyboard Has an XML Skeleton</h1>
     
     
       <p class="meta">
@@ -106,7 +103,7 @@
   </header>
 
 
-  <div class="entry-content"><h2>Storyboard&rsquo;s Skeleton: XML</h2>
+<div class="entry-content"><h2>Storyboard&rsquo;s Skeleton: XML</h2>
 
 <p>If you&rsquo;ve just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you might not have run into this yet. The Storyboard file in Interface Builder is a magical place free of HTML and CSS drudgery. It&rsquo;s a place where you can drag-and-drop objects into scenes as quickly as your imagination can conjure them up. But Storyboard isn&rsquo;t all magic; it&rsquo;s magic and XML.</p>
 
@@ -356,76 +353,16 @@
 
 <p>Ok, so I know this is a lot of XML. But it&rsquo;s pretty cool, because if you can get past how horrible it is to read, you can see that it&rsquo;s SUPER DESCRIPTIVE. Like so descriptive that every little checkbox and field and setting and doohickey that appears in Xcode&rsquo;s Attributes Inspector, Size Inspector, Connections Inspector, and Identity Inspector for every single view and subview is represented.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/09/smart-kegs-part-ii/">Smart-Kegs Part II</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Chris Gonzales</span></span>
 
-<time datetime="2013-08-09T07:43:00-04:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>It&rsquo;s Alive!!! (Locally)</h2>
-
-<p>KegKong lives! In <a href="http://chrisgonzgonz.github.io/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a> we left off with our flowmeter and arduino sending incomplete readings to the raspberry pi with no database persistance. I thought we&rsquo;d take care of this data integrity problem with either a data-logging shield or a wifi shield. Instead, the fix that brought us to a minimum viable product was actually a lot simpler- we took advantage of a delimiter with ruby&rsquo;s <strong>gets</strong> method, in this case &ldquo;\r\n&rdquo; which is the same as <strong>null</strong>.</p>
-
-<p><img class="left" src="/images/delimiter1">
-<img class="right" src="/images/kk_folders"></p>
-
-<p>Using this and the arduino&rsquo;s serial caching abilities, we made sure to only transfer only complete data to the raspberry pi and remove null values.</p>
-
-<p>Great! Next we needed an interface to show off our data. Our weapon of choice here is a light-weight Sinatra application with Activerecord. We built two models, keg and measurements. Keg keeps track of vital keg data like type of beer, maximum volume, and whether or not a refill request has been sent. Measurements allows us to capture the volume of each pull in pulses, the corresponding change in volume in gallons, and the id of the keg that each measurement belongs to. The measurement/keg id relationship is necessary as we will create a new keg in order to &ldquo;reset&rdquo; each time the beer runs out.</p>
-
-<p>A keg object can check its own volume by subtracting the sum of its measurements from its max volume, and it can send an email requesting reinforcements using the Gmail Sender gem.</p>
-
-<p><img class="center" src="/images/kegkong2_1"></p>
-
-<p>Here I&rsquo;ll leave you with KegKong fully functioning locally. In <strong>Smart-Kegs Part III</strong>, I&rsquo;ll go over all the fun we had with deployment to Heroku, changing our scripted method of persistance and migrating our SQLite database to PostgreSQL.</p>
-
-<p><img class="center" src="/images/kegkong2_2">
-<img class="center" src="/images/kegkong2_reset"></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/05/scrape-wikipedia-using-nokogiri-and-google-search/">Scraping Wikipedia Using Nokogiri and Google Search</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -437,354 +374,38 @@
   
 
 
-<time datetime="2013-08-05T19:55:00-04:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>The Problem:</h2>
-
-<p>I needed to write a method for an application that would take a famous programmer&rsquo;s name and scrape the related Wikipedia page for relevant resources, the most important of which would be a picture.</p>
-
-<p>Nokogiri can scrape a page when passed a url, but how could I ensure that the name passed would translate directly into a valid url? Or even that the name would be spelled correctly? As it turns out, Google can do the heavy lifting and point us directly to the desired page for scrapin&#8217;.</p>
-
-<h2>The Solution:</h2>
-
-<p>The solution is what I&rsquo;ll call a &lsquo;double-scrape&rsquo;. The first thing I did was create my query string by substituting blank spaces in the programmer&rsquo;s name for &lsquo;+&rsquo; and adding &lsquo;+wikipedia&rsquo; to the end of the query, all to ensure that the first result would be the wikipedia page related to the programmer&rsquo;s name.</p>
-
-<p>Next we get the Google search result page for this query string, which Nokogiri scrapes to turn the first result in the list (which should be the Wikipedia article) into the url for the programmer&rsquo;s wikipedia page. Scrape n&#8217; repeat.</p>
-
-<p><img class="center" src="/images/noko1"></p>
-
-<h2>Postscript</h2>
-
-<p>While I&rsquo;m still testing this solution out, I have to say it seems pretty robust. The evidence lies in our seed data, where one Programmer of the Day was listed as &lsquo;Cookie Monster.&rsquo;</p>
-
-<p><img class="center" src="/images/noko2"></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+<time datetime="2014-10-13T23:02:00-04:00" pubdate data-updated="true">Oct 13<span>th</span>, 2014</time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/">Setting Up a Custom Domain With Octopress / Github Pages</a></h1>
-    
-    
-      <p class="meta">
-        
 
-
-
-
-
-
-
-
+<span class="categories">
   
+    <a class='category' href='/blog/categories/storyboard/'>Storyboard,</a>, <a class='category' href='/blog/categories/xml/'>XML</a>, <a class='category' href='/blog/categories/xcode/'>Xcode,</a>, <a class='category' href='/blog/categories/ios/'>iOS,</a>
+  
+</span>
 
 
-<time datetime="2013-07-24T09:04:00-04:00" pubdate data-updated="true">Jul 24<span>th</span>, 2013</time>
-        
-      </p>
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>I set up a blog with Octopress. It&rsquo;s great, but I&rsquo;d always get really skeptical looks when I&rsquo;d tell friends and family to read my stuff at <a href="http://chrisgonzgonz.github.io">chrisgonzgonz.github.io</a>.</p>
-
-<p>To remedy this, I bought a domain name. I had some issues getting it to play nice with my github pages site, so here&rsquo;s a quick n&#8217; dirty guide to setting this up:</p>
-
-<p>Please note that this assumes that you&rsquo;ve <a href="http://octopress.org/docs/setup/">setup an Octopress blog</a></p>
-
-<ol>
-<li><p>Buy your domain name. I picked mine up from <a href="https://www.namecheap.com/">Namecheap</a> so I&rsquo;ll use screenshots of my setup on their site.</p></li>
-<li><p>Next, set up an A Record of <code> 204.232.175.78 </code> and CNAME of your github pages address, in this case <code>chrisgonzgonz.github.io</code>. This can be done from &ldquo;All Host Records&rdquo; on Namecheap.</p></li>
-</ol>
-
-
-<p><img class="center" src="/images/namecheap1"></p>
-
-<ol>
-<li>Finally, create a file called <code>CNAME</code> <em>in your blog&rsquo;s source folder.</em> This part is important- if you&rsquo;re not using Octopress you can put this in your blog&rsquo;s root. Octopress requires that this file be in source so that when you <code>rake generate</code> it can be pushed to master. In your CNAME file, save the name of your new domain:</li>
-</ol>
-
-
-<p><img class="center" src="/images/namecheap2"></p>
-
-<p>That&rsquo;s it, 3 easy steps. <code>Rake generate</code> and <code>rake deploy</code> as normal and it&rsquo;ll take about 10 minutes to update. When you type in codercorral.com, you&rsquo;ll be directed to github at 204.232.175.78, and my blog will be found via the CNAME file.</p>
-
-<p><img class="center" src="/images/namecheap4"></p>
-
-<p>Also, Google has a cool <a href="http://support.google.com/a/bin/answer.py?hl=en&amp;answer=48090#K">guide to DNS basics</a> for those interested in learning more about A Record and CNAME.</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisgonzgonz.github.io/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/" data-via="Chris_GonzGonz" data-counturl="http://chrisgonzgonz.github.io/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
-
-    </article>
-  
-  
-    <article>
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/01/smart-kegs-part-i/">Smart-Kegs Part I</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-01T23:07:00-04:00" pubdate data-updated="true">Jul 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Kegs Should Refill Themselves</h2>
-
-<p>We have smart phones and smart cars, why not Smart-Kegs (patent pending)? <a href="http://jgtr.github.io/">Jordán</a>, <a href="http://weatherlightus.tumblr.com/">Joe</a> and I would like to present to you&hellip; KegKong! The solution to a tapped keg on a Friday afternoon at The Flatiron School. KegKong will re-order himself before the class gets to the bottom of the barrel, and we&rsquo;ll be able to track usage statistics along the way.</p>
-
-<p><img class="center" src="http://i411.photobucket.com/albums/pp199/hccllc2008/1105081524.jpg"></p>
-
-<p>You can find our team&rsquo;s initial plan in Joe&rsquo;s <a href="http://weatherlightus.tumblr.com/post/53232311824/and-the-beer-must-flow">post</a>. Since then, we&rsquo;ve amassed the hardware (raspberry pi, arduino, flow meter), we&rsquo;ve programmed the pi/arduino, and we&rsquo;ve begun our initial tests.</p>
-
-<h2>Working with hardware is hard&hellip;</h2>
-
-<p>The last week has taught me to appreciate the beautiful error messages that Ruby, Sinatra, and almost anything software related have to offer. We&rsquo;ve been unable to find much documentation on our second-hand flow meter so we&rsquo;ve been having fun figuring out how to wire everything together.</p>
-
-<p>A Beautiful and Informative Ruby Error Message:
-<img class="center" src="http://snag.gy/5EbK3.jpg"></p>
-
-<p>Jordán Tackling a Flow Meter to Arduino Error Message:
-<img class="center" src="http://snag.gy/Ie968.jpg"></p>
-
-<h2>Working with hardware is rewarding&hellip;</h2>
-
-<p>Our team has spent some evenings working on transmitting an electrical pulse from the flow meter to the arduino to the raspberry pi. We&rsquo;ve hypothesized as to why a process may or may not be working and we&rsquo;ve broken problems down into ever-smaller components. I&rsquo;ll cover the issues we had and our next steps in a second, but let me just say, I have never high-fived so hard over such incremental progress.
-<img class="center" src="http://www.corepower.com/blog/wp-content/uploads/Victory-2.jpg"></p>
-
-<h2>Working with hardware is rewarding&hellip;</h2>
-
-<p>Issues so far:
-<li>there seemed to be a lack of documentation for related flow meter projects in general, and related projects written in Ruby specifically (we aim to fix this)</li>
-<li>correctly connecting flow meter &ndash;> arduino &ndash;> raspberry pi</li>
-<li>capturing flow meter readings</li>
-<li>shipping flow meter data to raspberry pi for analysis</li></p>
-
-<p>The first 3 items on this list were taken care of by sorting out the wiring via guess and check and isolated pulse readings on the arduino. After that, raspberry pi can consume the arduino&rsquo;s output via loops on each machine (arduino printing, pi listening). These loops are not synchronized, so although we are able to pass packets of data along this chain, some packets get cut off.</p>
-
-<pre><code>                            Ruby Loop (Listening):
-</code></pre>
-
-<p><img class="center" src="http://snag.gy/wl86E.jpg"></p>
-
-<pre><code>                          Arduino Loop (Printing):
-</code></pre>
-
-<p><img class="center" src="http://snag.gy/mzcBe.jpg"></p>
-
-<h2>2 possible solutions for this data integrity problem:</h2>
-
-<p><li>install a data-logging shield onto the arduino to store data and send in complete packets to be parsed at a later time</li>
-<li>install a WiFi shield that connects the arduino wirelessly, and we can send TCP packets to the raspberry pi which we can set up to always be listening via sockets.</li></p>
-
-<p>More to come as the saga continues!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
+        <a class="basic-alignment left" href="/blog/2013/08/09/smart-kegs-part-ii/" title="Previous Post: Smart-Kegs Part II">&laquo; Smart-Kegs Part II</a>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/16/speaker-deck-rubyconf-brazil-2012/">Speaker Deck: RubyConf Brazil 2012</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-16T22:28:00-04:00" pubdate data-updated="true">Jun 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>A retrospective of problematic projects (Rubyconf Brazil 2012)</h2>
-
-<p>I am currently a student at The Flatiron School, learning how to develop for the internetz in Ruby on Rails. We were given an assignment to check out a Ruby-related slide deck on Speaker Deck and drop some knowledge via blog. Here&rsquo;s mine:</p>
-
-<p>My <a href="https://speakerdeck.com/danielvlopes/a-retrospective-of-problematic-projects-rubyconf-brazil-2012">deck of choice</a> was a presentation by Daniel Lopes at RubyConf Brazil 2012. As a university student, I ventured to Brazil for a six-month immersive experience. I thought it would be interesting to test my Portuguese in relation to the Ruby language.</p>
-
-<p>You may ask, what drew me to this presentation? Well, I&rsquo;ll ask you a couple questions in return&hellip; What are problematic projects? What is it like to read a technical presentation in Portuguese? What is RubyConf Brazil? Here&rsquo;s a brief overview of what I gleaned from this presentation:</p>
-
-<h3>Topics Touched</h3>
-
-<pre><code>+Best Practices  
-  +SCRUM  
-+Rails Best Practices  
-+Control Levels:  
-  +Individual  
-  +Team  
-  +Outside of Control  
-+DRY &amp; Automation  
-+Creation -&gt; Launch -&gt; Maintenance  
-+Automated Tests  
-+What Should I Test?  
-+Agile: Team &amp; client on the same page, maintaining flexibility  
-</code></pre>
-
-<p>Daniel&rsquo;s slides from RubyConf Brazil 2012 focused on common project issues, good workflow and best practices. I definitely had to Google a bunch of the aforementioned buzzwords. But, I think it&rsquo;s great to start thinking about how other developers work in groups and how product is created seamlessly. Here are a few of my takeaways:</p>
-
-<h3>Takeaways (Slides Only)</h3>
-
-<p>Three control levels exist: we have control over things as individuals, as a team, and sometimes we have no control at all. It is important to be congnizant of these control levels and to behave accordingly. As developers, the most control we wield is in the individual scope.</p>
-
-<p>It is Daniel&rsquo;s view that there can be too much DRY (Don&rsquo;t Repeat Yourself) and Automation, when done without vision and specificity. In the future, I&rsquo;d like to know more about automation in this context.</p>
-
-<p>What Should I Test? This was probably the most helpful section for me. There  are some great quotes from Kent Beck in the slides to illustrate this point:</p>
-
-<p>&ldquo;&hellip;my philosophy is to test as little as possible to reach a given level of confidence&hellip;&rdquo;
--and-
-&ldquo;If I don&rsquo;t typically make a kind of mistake, I don&rsquo;t test for it&hellip;&rdquo;</p>
-
-<p>Essentially, there can be too much testing. Testing should be focused and principled.</p>
-
-<h3>Summary</h3>
-
-<p>Ruby Conference Brazil is the largest Ruby conference in Latin America, with more than 750 attendees and almost as many online participants. Many influential speakers from the international Ruby community like Chad Fowler and Yehuda Katz have made the journey. It is on my radar to attend this conference in the future.</p>
-
-<p>Ruby is a beautiful and universal language. Reading this presentation with my intermediate Portuguese skillz was a pleasure. Major props to Daniel, for making it interesting and for writing some of the difficult concepts in English.</p>
-
-<p>Helpful diagram from the slides to illustrate the effects of excessive DRY &amp; Automation:
-<img class="center" src="/images/grated_slide_for_kids.jpg"></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/16/social-media-for-developers/">#SocialMedia for Developers: A Beginner&#8217;s Guide</a></h1>
-    
-    
-      <p class="meta">
-        
+    </p>
+  </footer>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-16T20:57:00-04:00" pubdate data-updated="true">Jun 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>I&rsquo;ve been living under a rock for the last 2 years.</h2>
-
-<p>I&rsquo;ve just finished a tour of duty with a rigid financial institution that blocked virtually all forms of social media. Actually, they blocked any website I use on a daily basis. The Google suite, Facebook, Twitter&hellip; you get the picture.</p>
-
-<p>And so it went&hellip; fake Facebook name so &ldquo;the man&rdquo; wouldn&rsquo;t be able to find me. I wasn&rsquo;t even LinkedIn with my friends and colleagues in our little version of North Korea. That is, until I dropped the mic after my farewell speech.</p>
-
-<h2>New Beginnings</h2>
-
-<p>So I&rsquo;m learning now.</p>
-
-<p>Better late than never, everyone seems to say.</p>
-
-<p>We&rsquo;ve had some great speakers in class at The Flatiron School, and I&rsquo;ve noticed that the developer world communicates via social media. I suspect all of the instructors at The Flatiron School knew each other&rsquo;s &ldquo;handles&rdquo; before meeting in real life. Even I, a social media neanderthal, followed Sandi Metz before I knew how awesome she was.</p>
-
-<p>Indeed, everything seems to revolve around blogs, micro-blogs, and micro-micro blogs (if that exists). It&rsquo;s daunting; I mean, what&rsquo;s a caveman to do?</p>
-
-<p>So let&rsquo;s chop it up for the social media impaired, and see where it takes us.</p>
-
-<h3>What I Use</h3>
-
-<p>My current beginner&rsquo;s cocktail is LinkedIn and Twitter, and of course, our sweet, sweet Octopress. Although I&rsquo;m sure I&rsquo;m using Twitter wrong, TweetDeck is awesome. It&rsquo;s a command center that shows me how I&rsquo;ve followed too many people, published almost zero content, and have a paltry amount of followers (on a totally unrelated note). All joking aside, Twitter is a great outlet for my opinions as a green bean developer. It&rsquo;s a resourceful tool to follow well-known developers and network with those in the Silicon Alley startup scene.</p>
-
-<p>LinkedIn has been also been great as far as job inquiries and introductions are concerned, plus I find it very easy to use.</p>
-
-<p>As far as Octopress is concerned, you&rsquo;re reading it. More to come as I become a markdown master.</p>
-
-<p>Here are a few tips and screenshots that have helped me employ TweetDeck to effectively manage my web presence:
-My column setup is as follows:</p>
-
-<p>Timeline &ndash; Activity &ndash; Interactions &ndash; Tweets &ndash; Search: &ldquo;@FlatironSchool&rdquo; &ndash; Search: &ldquo;@shtavisays&rdquo;</p>
-
-<p><img class="center" src="http://snag.gy/V8bbx.jpg"></p>
-
-<p>I like this setup; the content is arranged from left to right, scaling from public to personal interests. I find search columns to be particularly useful as they allow me to receive feeds based on hash tags or mentions. In the screenshot below, I have two search columns set up to find mentions of @FlatironSchool and @shtavisays.</p>
-
-<p><img class="center" src="http://snag.gy/qcVDf.jpg"></p>
-
-<h3>Forget @shtavisays, Look at How Avi Tweets</h3>
-
-<p>For starters, our Flatiron School Dean has employed a succinct bounty of information in his bio without cracking 160 characters. Current pursuits, past endeavors, personal links, you name it. I&rsquo;ll be updating my current Jay-Z-quote-starter-bio as soon as I&rsquo;m done with this post (&ldquo;Drink Cris Out the Bottle, Eat Popeyes for Dinner&rdquo;).</p>
-
-<p>Now that I&rsquo;ve pointed out the obvious, here&rsquo;s the rest. Avi, like Jeff Casimir, Gwen Bell, and Sandi Metz, uses Twitter as an all-purpose outlet. It&rsquo;s a mix of the personal and professional, a swiss-army knife to get the thought across whatever that may be. I&rsquo;ve seen Twitter get speakers to come to The Flatiron School and help students interact with big names within the tech community. So help me get started- Who should I follow? What should I look out for?</p>
-
-<p>I&rsquo;m excited to leave my caveman days behind me.</p>
-
-<p><img class="center" src="http://www.mrgeek.me/wp-content/uploads/2013/04/caveman_computer.jpg"></p>
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -792,7 +413,7 @@ My column setup is as follows:</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/">Xcode&#8217;s Storyboard Has an XML Skeleton</a>
+        <a href="/blog/2014/10/13/xcodes-storyboard-has-an-xml-skeleton/">Xcode's Storyboard Has an XML Skeleton</a>
       </li>
     
       <li class="post">
@@ -820,6 +441,7 @@ My column setup is as follows:</p>
 
   
 </aside>
+
 
     </div>
   </div>
