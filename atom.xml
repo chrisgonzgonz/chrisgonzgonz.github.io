@@ -4,7 +4,7 @@
   <title><![CDATA[CoderCorral]]></title>
   <link href="http://chrisgonzgonz.github.io/atom.xml" rel="self"/>
   <link href="http://chrisgonzgonz.github.io/"/>
-  <updated>2014-10-14T07:44:09-04:00</updated>
+  <updated>2014-10-14T08:18:28-04:00</updated>
   <id>http://chrisgonzgonz.github.io/</id>
   <author>
     <name><![CDATA[Chris Gonzales]]></name>
@@ -21,6 +21,14 @@
     <content type="html"><![CDATA[<h2>Storyboard&rsquo;s Skeleton: XML</h2>
 
 <p>If you&rsquo;ve just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you might not have run into this yet. The Storyboard file in Interface Builder is a magical place free of HTML and CSS drudgery. It&rsquo;s a place where you can drag-and-drop objects into scenes as quickly as your imagination can conjure them up. But Storyboard isn&rsquo;t all magic; it&rsquo;s magic and XML.</p>
+
+<h3>What is XML?</h3>
+
+<p>XML, or Extensible Markup Language, is a document format that is both human-readable and machine-readable. It is important to note that the fact that XML is human-readable doesn&rsquo;t mean that it is a pleasure to do so.</p>
+
+<p>XML is a lot more convoluted than another popular data-interchange format, JSON (JavaScript Object Notation). If this is the case, why would the great minds at Apple back Storyboards with XML instead of its cool new cousin? While JSON is beautifully simple, it is limited in the types of data it can store, namely text and numbers. XML can handle these traditional data types and more, including audio, video, images, formatting, documents, etc.</p>
+
+<p>As we&rsquo;ll see below, Storyboard XML contains <strong>A LOT</strong> of information. It&rsquo;s primarily strings and numbers, so JSON could have been used. However, the use of nested tags with id&rsquo;s and attributes to represent individual (and groups of) Storyboard objects paints a pretty clean picture or how things are laid out on a Storyboard. The XML provides a solid skeleton.</p>
 
 <p>To see how Storyboard objects translate into XML, I&rsquo;ve put together a little Halloween themed jukebox layout:</p>
 
