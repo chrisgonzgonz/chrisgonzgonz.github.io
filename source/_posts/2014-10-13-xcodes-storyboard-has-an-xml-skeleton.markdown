@@ -9,6 +9,13 @@ categories:
 ##Storyboard's Skeleton: XML
 If you've just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you might not have run into this yet. The Storyboard file in Interface Builder is a magical place free of HTML and CSS drudgery. It's a place where you can drag-and-drop objects into scenes as quickly as your imagination can conjure them up. But Storyboard isn't all magic; it's magic and XML.
 
+###What is XML?
+XML, or Extensible Markup Language, is a document format that is both human-readable and machine-readable. It is important to note that the fact that XML is human-readable doesn't mean that it is a pleasure to do so. 
+
+XML is a lot more convoluted than another popular data-interchange format, JSON (JavaScript Object Notation). If this is the case, why would the great minds at Apple back Storyboards with XML instead of its cool new cousin? While JSON is beautifully simple, it is limited in the types of data it can store, namely text and numbers. XML can handle these traditional data types and more, including audio, video, images, formatting, documents, etc. 
+
+As we'll see below, Storyboard XML contains __A LOT__ of information. It's primarily strings and numbers, so JSON could have been used. However, the use of nested tags with id's and attributes to represent individual (and groups of) Storyboard objects paints a pretty clean picture or how things are laid out on a Storyboard. The XML provides a solid skeleton.
+
 To see how Storyboard objects translate into XML, I've put together a little Halloween themed jukebox layout:
 
 !["monster_mash_full"](/images/monster_mash_full.png)
