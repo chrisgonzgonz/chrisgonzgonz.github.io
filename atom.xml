@@ -4,7 +4,7 @@
   <title><![CDATA[CoderCorral]]></title>
   <link href="http://chrisgonzgonz.github.io/atom.xml" rel="self"/>
   <link href="http://chrisgonzgonz.github.io/"/>
-  <updated>2014-10-14T07:26:59-04:00</updated>
+  <updated>2014-10-14T07:44:09-04:00</updated>
   <id>http://chrisgonzgonz.github.io/</id>
   <author>
     <name><![CDATA[Chris Gonzales]]></name>
@@ -325,7 +325,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Setting Up a Custom Domain with Octopress / Github Pages]]></title>
+    <title type="html"><![CDATA[Setting Up a Custom Domain With Octopress / Github Pages]]></title>
     <link href="http://chrisgonzgonz.github.io/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages/"/>
     <updated>2013-07-24T09:04:00-04:00</updated>
     <id>http://chrisgonzgonz.github.io/blog/2013/07/24/how-to-setup-a-custom-domain-with-octopress-slash-github-pages</id>
@@ -390,7 +390,7 @@
 
 <p>Issues so far:
 <li>there seemed to be a lack of documentation for related flow meter projects in general, and related projects written in Ruby specifically (we aim to fix this)</li>
-<li>correctly connecting flow meter &ndash;> arduino &ndash;> raspberry pi</li>
+<li>correctly connecting flow meter -> arduino -> raspberry pi</li>
 <li>capturing flow meter readings</li>
 <li>shipping flow meter data to raspberry pi for analysis</li></p>
 
@@ -505,7 +505,7 @@
 <p>Here are a few tips and screenshots that have helped me employ TweetDeck to effectively manage my web presence:
 My column setup is as follows:</p>
 
-<p>Timeline &ndash; Activity &ndash; Interactions &ndash; Tweets &ndash; Search: &ldquo;@FlatironSchool&rdquo; &ndash; Search: &ldquo;@shtavisays&rdquo;</p>
+<p>Timeline - Activity - Interactions - Tweets - Search: &ldquo;@FlatironSchool&rdquo; - Search: &ldquo;@shtavisays&rdquo;</p>
 
 <p><img class="center" src="http://snag.gy/V8bbx.jpg"></p>
 
