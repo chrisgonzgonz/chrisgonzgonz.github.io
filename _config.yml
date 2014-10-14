@@ -4,10 +4,10 @@
 
 url: codercorral.com #http://chrisgonzgonz.github.io
 title: CoderCorral
-subtitle: Chris Gonzales, Student Dev @ The Flatiron School in NYC
+subtitle: "Ramblings RE: iOS, Rails & Hardware"
 author: Chris Gonzales
 simple_search: http://google.com/search
-description: Tech Fun from a Student @ The Flatiron School
+description: #Tech Fun from a Student @ The Flatiron School
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
