@@ -3,7 +3,7 @@ layout: post
 title: "Xcode's Storyboard Has an XML Skeleton"
 date: 2014-10-13 23:02
 comments: true
-categories: Xcode, iOS, Storyboard, XML
+categories: 
 ---
 
 ##Storyboard's Skeleton: XML
