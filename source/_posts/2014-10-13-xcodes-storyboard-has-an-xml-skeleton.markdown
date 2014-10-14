@@ -7,7 +7,7 @@ categories: Xcode, iOS, Storyboard, XML
 ---
 
 ##Storyboard's Skeleton: XML
-If you've just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you might not have run into this yet. The Storyboard file in Interface Builder is a magical place free of the HTML and CSS drudgery. It's a place where you can drag-and-drop objects into scenes as quickly as your imagination can conjure them up. But Storyboard isn't all magic; it's magic and XML.
+If you've just started dabbling in iOS and have been lucky enough to avoid Storyboard merge conflicts, you might not have run into this yet. The Storyboard file in Interface Builder is a magical place free of HTML and CSS drudgery. It's a place where you can drag-and-drop objects into scenes as quickly as your imagination can conjure them up. But Storyboard isn't all magic; it's magic and XML.
 
 To see how Storyboard objects translate into XML, I've put together a little Halloween themed jukebox layout:
 
