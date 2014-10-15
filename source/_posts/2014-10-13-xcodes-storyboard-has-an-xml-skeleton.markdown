@@ -27,7 +27,7 @@ Let's talk about the layout first. Our Storyboard's Initial View Controller is a
 FISJukeboxViewController has some subviews:
 
 * A navigation item title
-* 2 UIBarButtonItems
+* 2 UIBarButtonItems (called fastfoward & search respectively)
 * 2 UIButtons
 * A UITextField
 * A UITextView
@@ -156,3 +156,89 @@ As you can see, it's a plain vanilla UINavigationController. The great customiza
 ```
 
 Ok, so I know this is a lot of XML. But it's pretty cool, because if you can get past how horrible it is to read, you can see that it's SUPER DESCRIPTIVE. Like so descriptive that every little checkbox and field and setting and doohickey that appears in Xcode's Attributes Inspector, Size Inspector, Connections Inspector, and Identity Inspector for every single view and subview is represented.
+
+### Monster Mash Jukebox *in* XML
+
+FISJukeboxViewController has some subviews:
+
+* A navigation item title
+* 2 UIBarButtonItems (called fastfoward & search respectively)
+```xml
+<navigationItem key="navigationItem" title="Monster Mash Jukebox" id="oeF-Q3-RQ7">
+		<barButtonItem key="leftBarButtonItem" systemItem="fastForward" id="mEm-xQ-80B"/>
+		<barButtonItem key="rightBarButtonItem" systemItem="search" id="Wnw-xL-1xa">
+				<connections>
+						<segue destination="sFH-Ra-eR6" kind="push" id="dPq-Kt-AS5"/>
+				</connections>
+		</barButtonItem>
+</navigationItem>
+```
+* 2 UIButtons
+```xml
+<button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf4-v3-4l3">
+		<rect key="frame" x="20" y="84" width="57" height="30"/>
+		<state key="normal" title="Play">
+				<color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+		</state>
+		<connections>
+				<action selector="playButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Oj5-ck-UTU"/>
+		</connections>
+</button>
+<button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iq-tG-pLm">
+		<rect key="frame" x="248" y="84" width="52" height="30"/>
+		<state key="normal" title="Stop">
+				<color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+		</state>
+		<connections>
+				<action selector="stopButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gKe-8S-iZF"/>
+		</connections>
+</button>
+
+```
+* A UITextField
+```xml
+<textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song #" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zs-Oa-X6P">
+		<rect key="frame" x="85" y="84" width="155" height="30"/>
+		<fontDescription key="fontDescription" type="system" pointSize="14"/>
+		<textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+</textField>
+```
+* A UITextView
+```xml
+<textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-Sv-WQZ">
+		<rect key="frame" x="20" y="147" width="280" height="211"/>
+		<color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+		<mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+		<fontDescription key="fontDescription" type="system" pointSize="14"/>
+		<textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+</textView>
+```
+
+And A UIView "container" with 3 subviews:
+
+* A UISlider
+```xml
+<slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="s6K-YA-5Nw">
+		<rect key="frame" x="66" y="21" width="118" height="31"/>
+</slider>
+```
+
+* A UIImageView
+```xml
+<imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="halloween236.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hah-IK-733">
+		<rect key="frame" x="167" y="53" width="64" height="64"/>
+</imageView>
+```
+
+* A UISwitch
+```xml
+<switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxc-hA-oDz">
+		<rect key="frame" x="20" y="69" width="51" height="31"/>
+</switch>
+```
+
+###Summary
+Storyboard is backed by some very detailed XML. You'll notice an "id" attribute on every element; this id is used to reference other elements from within the XML, whether it's to show that a UIButton's target for an action is its controller or to demarcate the destination view controller in a segue. 
+
+__tl;dr__:
+It's Halloween season but there's no need to be afraid of Storyboard's XML.
