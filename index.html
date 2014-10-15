@@ -123,7 +123,7 @@
 
 <ul>
 <li>A navigation item title</li>
-<li>2 UIBarButtonItems</li>
+<li>2 UIBarButtonItems (called fastfoward &amp; search respectively)</li>
 <li>2 UIButtons</li>
 <li>A UITextField</li>
 <li>A UITextView</li>
@@ -356,6 +356,170 @@
 
 
 <p>Ok, so I know this is a lot of XML. But it&rsquo;s pretty cool, because if you can get past how horrible it is to read, you can see that it&rsquo;s SUPER DESCRIPTIVE. Like so descriptive that every little checkbox and field and setting and doohickey that appears in Xcode&rsquo;s Attributes Inspector, Size Inspector, Connections Inspector, and Identity Inspector for every single view and subview is represented.</p>
+
+<h3>Monster Mash Jukebox <em>in</em> XML</h3>
+
+<p>FISJukeboxViewController has some subviews:</p>
+
+<ul>
+<li>A navigation item title</li>
+<li>2 UIBarButtonItems (called fastfoward &amp; search respectively)</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;navigationItem</span> <span class="na">key=</span><span class="s">&quot;navigationItem&quot;</span> <span class="na">title=</span><span class="s">&quot;Monster Mash Jukebox&quot;</span> <span class="na">id=</span><span class="s">&quot;oeF-Q3-RQ7&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;barButtonItem</span> <span class="na">key=</span><span class="s">&quot;leftBarButtonItem&quot;</span> <span class="na">systemItem=</span><span class="s">&quot;fastForward&quot;</span> <span class="na">id=</span><span class="s">&quot;mEm-xQ-80B&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;barButtonItem</span> <span class="na">key=</span><span class="s">&quot;rightBarButtonItem&quot;</span> <span class="na">systemItem=</span><span class="s">&quot;search&quot;</span> <span class="na">id=</span><span class="s">&quot;Wnw-xL-1xa&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;connections&gt;</span>
+</span><span class='line'>                      <span class="nt">&lt;segue</span> <span class="na">destination=</span><span class="s">&quot;sFH-Ra-eR6&quot;</span> <span class="na">kind=</span><span class="s">&quot;push&quot;</span> <span class="na">id=</span><span class="s">&quot;dPq-Kt-AS5&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;/connections&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/barButtonItem&gt;</span>
+</span><span class='line'><span class="nt">&lt;/navigationItem&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>2 UIButtons</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;button</span> <span class="na">opaque=</span><span class="s">&quot;NO&quot;</span> <span class="na">contentMode=</span><span class="s">&quot;scaleToFill&quot;</span> <span class="na">fixedFrame=</span><span class="s">&quot;YES&quot;</span> <span class="na">contentHorizontalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">contentVerticalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">buttonType=</span><span class="s">&quot;roundedRect&quot;</span> <span class="na">lineBreakMode=</span><span class="s">&quot;middleTruncation&quot;</span> <span class="na">translatesAutoresizingMaskIntoConstraints=</span><span class="s">&quot;NO&quot;</span> <span class="na">id=</span><span class="s">&quot;mf4-v3-4l3&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;rect</span> <span class="na">key=</span><span class="s">&quot;frame&quot;</span> <span class="na">x=</span><span class="s">&quot;20&quot;</span> <span class="na">y=</span><span class="s">&quot;84&quot;</span> <span class="na">width=</span><span class="s">&quot;57&quot;</span> <span class="na">height=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;state</span> <span class="na">key=</span><span class="s">&quot;normal&quot;</span> <span class="na">title=</span><span class="s">&quot;Play&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;color</span> <span class="na">key=</span><span class="s">&quot;titleShadowColor&quot;</span> <span class="na">white=</span><span class="s">&quot;0.5&quot;</span> <span class="na">alpha=</span><span class="s">&quot;1&quot;</span> <span class="na">colorSpace=</span><span class="s">&quot;calibratedWhite&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/state&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;connections&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;action</span> <span class="na">selector=</span><span class="s">&quot;playButtonTapped:&quot;</span> <span class="na">destination=</span><span class="s">&quot;vXZ-lx-hvc&quot;</span> <span class="na">eventType=</span><span class="s">&quot;touchUpInside&quot;</span> <span class="na">id=</span><span class="s">&quot;Oj5-ck-UTU&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/connections&gt;</span>
+</span><span class='line'><span class="nt">&lt;/button&gt;</span>
+</span><span class='line'><span class="nt">&lt;button</span> <span class="na">opaque=</span><span class="s">&quot;NO&quot;</span> <span class="na">contentMode=</span><span class="s">&quot;scaleToFill&quot;</span> <span class="na">fixedFrame=</span><span class="s">&quot;YES&quot;</span> <span class="na">contentHorizontalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">contentVerticalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">buttonType=</span><span class="s">&quot;roundedRect&quot;</span> <span class="na">lineBreakMode=</span><span class="s">&quot;middleTruncation&quot;</span> <span class="na">translatesAutoresizingMaskIntoConstraints=</span><span class="s">&quot;NO&quot;</span> <span class="na">id=</span><span class="s">&quot;4iq-tG-pLm&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;rect</span> <span class="na">key=</span><span class="s">&quot;frame&quot;</span> <span class="na">x=</span><span class="s">&quot;248&quot;</span> <span class="na">y=</span><span class="s">&quot;84&quot;</span> <span class="na">width=</span><span class="s">&quot;52&quot;</span> <span class="na">height=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;state</span> <span class="na">key=</span><span class="s">&quot;normal&quot;</span> <span class="na">title=</span><span class="s">&quot;Stop&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;color</span> <span class="na">key=</span><span class="s">&quot;titleShadowColor&quot;</span> <span class="na">white=</span><span class="s">&quot;0.5&quot;</span> <span class="na">alpha=</span><span class="s">&quot;1&quot;</span> <span class="na">colorSpace=</span><span class="s">&quot;calibratedWhite&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/state&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;connections&gt;</span>
+</span><span class='line'>              <span class="nt">&lt;action</span> <span class="na">selector=</span><span class="s">&quot;stopButtonTapped:&quot;</span> <span class="na">destination=</span><span class="s">&quot;vXZ-lx-hvc&quot;</span> <span class="na">eventType=</span><span class="s">&quot;touchUpInside&quot;</span> <span class="na">id=</span><span class="s">&quot;gKe-8S-iZF&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/connections&gt;</span>
+</span><span class='line'><span class="nt">&lt;/button&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>A UITextField</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;textField</span> <span class="na">opaque=</span><span class="s">&quot;NO&quot;</span> <span class="na">clipsSubviews=</span><span class="s">&quot;YES&quot;</span> <span class="na">contentMode=</span><span class="s">&quot;scaleToFill&quot;</span> <span class="na">fixedFrame=</span><span class="s">&quot;YES&quot;</span> <span class="na">contentHorizontalAlignment=</span><span class="s">&quot;left&quot;</span> <span class="na">contentVerticalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">borderStyle=</span><span class="s">&quot;roundedRect&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Song #&quot;</span> <span class="na">minimumFontSize=</span><span class="s">&quot;17&quot;</span> <span class="na">translatesAutoresizingMaskIntoConstraints=</span><span class="s">&quot;NO&quot;</span> <span class="na">id=</span><span class="s">&quot;5zs-Oa-X6P&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;rect</span> <span class="na">key=</span><span class="s">&quot;frame&quot;</span> <span class="na">x=</span><span class="s">&quot;85&quot;</span> <span class="na">y=</span><span class="s">&quot;84&quot;</span> <span class="na">width=</span><span class="s">&quot;155&quot;</span> <span class="na">height=</span><span class="s">&quot;30&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;fontDescription</span> <span class="na">key=</span><span class="s">&quot;fontDescription&quot;</span> <span class="na">type=</span><span class="s">&quot;system&quot;</span> <span class="na">pointSize=</span><span class="s">&quot;14&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;textInputTraits</span> <span class="na">key=</span><span class="s">&quot;textInputTraits&quot;</span> <span class="na">keyboardType=</span><span class="s">&quot;numberPad&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/textField&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>A UITextView</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;textView</span> <span class="na">clipsSubviews=</span><span class="s">&quot;YES&quot;</span> <span class="na">multipleTouchEnabled=</span><span class="s">&quot;YES&quot;</span> <span class="na">contentMode=</span><span class="s">&quot;scaleToFill&quot;</span> <span class="na">fixedFrame=</span><span class="s">&quot;YES&quot;</span> <span class="na">editable=</span><span class="s">&quot;NO&quot;</span> <span class="na">selectable=</span><span class="s">&quot;NO&quot;</span> <span class="na">translatesAutoresizingMaskIntoConstraints=</span><span class="s">&quot;NO&quot;</span> <span class="na">id=</span><span class="s">&quot;XV6-Sv-WQZ&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;rect</span> <span class="na">key=</span><span class="s">&quot;frame&quot;</span> <span class="na">x=</span><span class="s">&quot;20&quot;</span> <span class="na">y=</span><span class="s">&quot;147&quot;</span> <span class="na">width=</span><span class="s">&quot;280&quot;</span> <span class="na">height=</span><span class="s">&quot;211&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;color</span> <span class="na">key=</span><span class="s">&quot;backgroundColor&quot;</span> <span class="na">red=</span><span class="s">&quot;1&quot;</span> <span class="na">green=</span><span class="s">&quot;1&quot;</span> <span class="na">blue=</span><span class="s">&quot;1&quot;</span> <span class="na">alpha=</span><span class="s">&quot;1&quot;</span> <span class="na">colorSpace=</span><span class="s">&quot;calibratedRGB&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;mutableString</span> <span class="na">key=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.<span class="nt">&lt;/mutableString&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;fontDescription</span> <span class="na">key=</span><span class="s">&quot;fontDescription&quot;</span> <span class="na">type=</span><span class="s">&quot;system&quot;</span> <span class="na">pointSize=</span><span class="s">&quot;14&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;textInputTraits</span> <span class="na">key=</span><span class="s">&quot;textInputTraits&quot;</span> <span class="na">autocapitalizationType=</span><span class="s">&quot;sentences&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/textView&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And A UIView &ldquo;container&rdquo; with 3 subviews:</p>
+
+<ul>
+<li>A UISlider</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;slider</span> <span class="na">opaque=</span><span class="s">&quot;NO&quot;</span> <span class="na">contentMode=</span><span class="s">&quot;scaleToFill&quot;</span> <span class="na">fixedFrame=</span><span class="s">&quot;YES&quot;</span> <span class="na">contentHorizontalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">contentVerticalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">value=</span><span class="s">&quot;0.5&quot;</span> <span class="na">minValue=</span><span class="s">&quot;0.0&quot;</span> <span class="na">maxValue=</span><span class="s">&quot;1&quot;</span> <span class="na">translatesAutoresizingMaskIntoConstraints=</span><span class="s">&quot;NO&quot;</span> <span class="na">id=</span><span class="s">&quot;s6K-YA-5Nw&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;rect</span> <span class="na">key=</span><span class="s">&quot;frame&quot;</span> <span class="na">x=</span><span class="s">&quot;66&quot;</span> <span class="na">y=</span><span class="s">&quot;21&quot;</span> <span class="na">width=</span><span class="s">&quot;118&quot;</span> <span class="na">height=</span><span class="s">&quot;31&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/slider&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>A UIImageView</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;imageView</span> <span class="na">userInteractionEnabled=</span><span class="s">&quot;NO&quot;</span> <span class="na">contentMode=</span><span class="s">&quot;scaleToFill&quot;</span> <span class="na">horizontalHuggingPriority=</span><span class="s">&quot;251&quot;</span> <span class="na">verticalHuggingPriority=</span><span class="s">&quot;251&quot;</span> <span class="na">fixedFrame=</span><span class="s">&quot;YES&quot;</span> <span class="na">image=</span><span class="s">&quot;halloween236.png&quot;</span> <span class="na">translatesAutoresizingMaskIntoConstraints=</span><span class="s">&quot;NO&quot;</span> <span class="na">id=</span><span class="s">&quot;Hah-IK-733&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;rect</span> <span class="na">key=</span><span class="s">&quot;frame&quot;</span> <span class="na">x=</span><span class="s">&quot;167&quot;</span> <span class="na">y=</span><span class="s">&quot;53&quot;</span> <span class="na">width=</span><span class="s">&quot;64&quot;</span> <span class="na">height=</span><span class="s">&quot;64&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/imageView&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>A UISwitch</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;switch</span> <span class="na">opaque=</span><span class="s">&quot;NO&quot;</span> <span class="na">contentMode=</span><span class="s">&quot;scaleToFill&quot;</span> <span class="na">horizontalHuggingPriority=</span><span class="s">&quot;750&quot;</span> <span class="na">verticalHuggingPriority=</span><span class="s">&quot;750&quot;</span> <span class="na">fixedFrame=</span><span class="s">&quot;YES&quot;</span> <span class="na">contentHorizontalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">contentVerticalAlignment=</span><span class="s">&quot;center&quot;</span> <span class="na">on=</span><span class="s">&quot;YES&quot;</span> <span class="na">translatesAutoresizingMaskIntoConstraints=</span><span class="s">&quot;NO&quot;</span> <span class="na">id=</span><span class="s">&quot;Fxc-hA-oDz&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;rect</span> <span class="na">key=</span><span class="s">&quot;frame&quot;</span> <span class="na">x=</span><span class="s">&quot;20&quot;</span> <span class="na">y=</span><span class="s">&quot;69&quot;</span> <span class="na">width=</span><span class="s">&quot;51&quot;</span> <span class="na">height=</span><span class="s">&quot;31&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/switch&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Summary</h3>
+
+<p>Storyboard is backed by some very detailed XML. You&rsquo;ll notice an &ldquo;id&rdquo; attribute on every element; this id is used to reference other elements from within the XML, whether it&rsquo;s to show that a UIButton&rsquo;s target for an action is its controller or to demarcate the destination view controller in a segue.</p>
+
+<p><strong>tl;dr</strong>:
+It&rsquo;s Halloween season but there&rsquo;s no need to be afraid of Storyboard&rsquo;s XML.</p>
 </div>
   
   
